@@ -6,6 +6,37 @@
     <meta name="viewport" content="width=device-width,initial-scale=1.0">
     <link rel="icon" href="<%= BASE_URL %>favicon.ico">
     <title><%= htmlWebpackPlugin.options.title %></title>
+    <style>
+      html{
+        font-size: 16px;
+      }
+      body
+      {
+        margin: 0;
+        padding: 0;
+      }
+    </style>
+      <script>
+        //屏幕适应
+        (function (win, doc) {
+          if (!win.addEventListener) return;
+          var html = document.documentElement;
+    
+          function setFont() {
+            var html = document.documentElement;
+            var k = 1920;
+            html.style.fontSize = html.clientWidth / k * 100 + "px";
+          }
+    
+          setFont();
+          setTimeout(function () {
+            setFont();
+          }, 300);
+          doc.addEventListener('DOMContentLoaded', setFont, false);
+          win.addEventListener('resize', setFont, false);
+          win.addEventListener('load', setFont, false);
+        })(window, document);
+      </script>
   </head>
   <body>
     <noscript>
