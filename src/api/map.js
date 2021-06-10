@@ -1,8 +1,5 @@
 import * as L from 'leaflet'
 import "leaflet/dist/leaflet.css";
-import "../assets/leaflet-markercluster/leaflet.markercluster-src"
-import "../assets/leaflet-markercluster/MarkerCluster.css"
-import "../assets/leaflet-markercluster/MarkerCluster.Default.css"
 import {JS_FST} from '../assets/localdata/test';
 
 function initmap(map){
@@ -49,26 +46,9 @@ function initmap(map){
     L.tileLayer.t = function () {
       return new L.TileLayer.T();
     }
+    L.marker([-51.5, -0.09]).addTo(map)
+    .bindPopup('A pretty CSS3 popup.<br> Easily customizable.')
+    .openPopup();
     map.addLayer(L.tileLayer.t());
-    var LayerMap = {
-      Layer_FST: L.layerGroup(),
-    }
-    var typearray = [
-      [LayerMap["Layer_FST"], JS_FST],
-    ];
-    //初始化各个坐标
-    var markers = {};
-    for (let i = 0; i < typearray.length; i++) {
-      L.geoJSON(typearray[i][1], {
-        pointToLayer: function (feature, latlng) {
-          var key = i + "_" + feature.id;
-          var marker = L.marker([latlng.lng, latlng.lat], {
-            alt: `${latlng.lng},${latlng.lat}`
-          }, );
-          markers[key] = marker;
-          return marker.addTo(typearray[i][0]);
-        },
-      })
-    };
 }
 export {initmap}
