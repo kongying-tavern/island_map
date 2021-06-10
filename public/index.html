@@ -24,7 +24,16 @@
     
           function setFont() {
             var html = document.documentElement;
-            var k = 1920;
+            var k=0
+            if (html.clientWidth>750)
+            {
+              k = 1920;
+            }
+            else
+            {
+              k=750
+            }
+
             html.style.fontSize = html.clientWidth / k * 100 + "px";
           }
     

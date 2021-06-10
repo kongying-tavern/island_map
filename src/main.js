@@ -6,10 +6,14 @@ import VueI18n from 'vue-i18n'
 //引入Leaflet插件
 import * as L from 'leaflet'
 import "leaflet/dist/leaflet.css";
-
-Vue.L = Vue.prototype.$L = L
+//引入axios
+import axios from 'axios'
 
 Vue.use(VueI18n)
+
+Vue.prototype.$axios = axios
+
+Vue.L = Vue.prototype.$L = L
 
 Vue.config.productionTip = false
 

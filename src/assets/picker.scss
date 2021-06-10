@@ -1,0 +1,197 @@
+//筛选器样式
+@font-face {
+    font-family: font;
+    src: url(../assets/hywh_thin2.ttf);
+}
+.picker
+{
+    position: fixed;
+    z-index: 9999;
+    right:.2rem;
+    top: .2rem;
+    width: 4.8rem;
+    height: 8.5rem;
+    background: url(../assets/Content_img/Content_img/bac.png) no-repeat;
+    background-size: 100% 100%;
+    font-family: font;
+}
+.picker_header
+{
+    display: flex;
+    justify-content: space-between;
+    width: 100%;
+    height: 13%;
+    .avatar{
+        position: relative;
+        width:1.04rem;
+        height:.8rem;
+        background: url(../assets/Content_img/Content_img/avatar_bg.png) no-repeat;
+        background-size: 100% 100%;
+        margin: .3rem 0 0 .3rem;
+        .avatar_img
+        {
+            position: absolute;
+            width: 70%;
+            height: 80%;
+            top: 8%;
+            left: 15%;
+        }
+    }
+    .info_part{
+        width: 62%;
+        height: 30%;
+        margin: .3rem .2rem 0 0;
+        .user_link{
+            display: block;
+            color: #D7D2B8;
+            font-size: .22rem;
+            text-decoration: none;
+        }
+        .info_part-links
+        {
+            display: flex;
+            margin-top: .2rem;
+            a{
+                display: flex;
+                font-size: .18rem;
+                color: #D7D2B8;
+                text-decoration: none;
+                margin-right: .3rem;
+            }
+            @mixin icon {
+                display: block;
+                width: .24rem;
+                height: .24rem;
+                margin-right: .05rem;
+            }
+            .icon1{
+                @include icon;
+                background: url(../assets/Content_img/Content_img/icon_cloud.png) no-repeat;
+                background-size: 100% 100%;
+            }
+            .icon2{
+                @include icon();
+                background: url(../assets/Content_img/Content_img/icon_fankui.png) no-repeat;
+                background-size: 100% 100%;
+            }
+        }
+    }
+}
+.picker_area1
+{
+    position: relative;
+    width: 4.48rem;
+    height: 2rem;
+    margin: .28rem auto 0;
+    .picker_area1_cover{
+        position: absolute;
+        top: 0;
+        left: 3%;
+        width: 94%;
+        height: 1rem;
+        background: #9F9089;
+        border-radius: 5px;
+    }
+    .picker_area1_containor
+    {
+        z-index: 10;
+        position: relative;
+        width: 100%;
+        height: 2rem;
+        margin: .05rem auto 0;
+        background:#F0E9E2;
+        border-radius: 5px;
+    }
+    .picker_area1_header
+    {
+        display: flex;
+        align-items: center;
+        width: 98%;
+        margin: 0 auto;
+        height: .6rem;
+        h3{
+            height: 100%;
+            display: flex;
+            align-items: center;
+            font-weight: normal;
+            .picker_area1_header_icon
+            {
+                display: block;
+                width: .34rem;
+                height: .34rem;
+                background:url(../assets/Content_img/Content_img/Treasure_icon.png) no-repeat;
+                background-size: 100% 100%;
+            }
+            span
+            {
+                display: block;
+                height: .34rem;
+                font-size: .2rem;
+                color: #817472;
+                line-height: .34rem;
+                margin-left: .05rem;
+            }
+        }
+        .switch_btn
+        {
+            display: flex;
+            justify-content: space-around;
+            align-items: center;
+            position: relative;
+            width: 1.8rem;
+            height: .3rem;
+            background:url(../assets/Content_img/Content_img/bac_switch.png) no-repeat;
+            background-size: 100% 100%;
+            margin-left: .8rem;
+            span{
+                z-index: 99;
+                font-size: .16rem;
+                color: #817472;
+                cursor: pointer;
+            }
+        }
+        @mixin switchbtn {
+            position: absolute;
+            top: .02rem;
+            left: .02rem;
+            width: .9rem;
+            height: .26rem;
+            background:url(../assets/Content_img/Content_img/bac_switch_btn.png) no-repeat;
+            background-size: 100% 100%;
+        }
+        @keyframes switchright{
+            from{
+                left:.02rem;
+            }
+            to{
+                left: .88rem;
+            }
+        }
+        @keyframes switchleft{
+            from{
+                left: .88rem;
+            }
+            to{
+                left:.02rem
+            }
+        }
+        .switch_btn_normal
+        {
+            @include switchbtn;
+        }
+        .switch_btn_on
+        {
+            @include switchbtn;
+            animation: switchright 0.5s forwards;
+        }
+        .switch_btn_off
+        {
+            @include switchbtn;
+            animation: switchleft 0.5s forwards;
+        }
+        .selected_span
+        {
+            color: #FFFADE !important;
+        }
+    }
+}

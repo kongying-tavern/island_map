@@ -1,23 +1,22 @@
 <template>
   <div class="main">
       <div id="map"></div>
-      <picker></picker>
+      <!-- <picker></picker> -->
   </div>
 </template>
 
 <script>
 import {initmap} from '../api/map.js'
-import picker from '../component/picker.vue'
+// import picker from '../component/picker.vue'
 export default {
-  components: { picker },
   data() {
     return {
       map:''
     }
   },
-  component:{
-    picker
-  },
+  // component:{
+  //   picker
+  // },
   name: 'index',
   methods: {
   },
