@@ -1,7 +1,14 @@
 import * as L from 'leaflet'
 import "leaflet/dist/leaflet.css";
+import "../assets/leaflet-markercluster/leaflet.markercluster-src"
+import "../assets/leaflet-markercluster/MarkerCluster.css"
+import "../assets/leaflet-markercluster/MarkerCluster.Default.css"
+import {JS_FST} from '../assets/localdata/test';
 
 function initmap(map){
+    let json=JS_FST
+    console.log(json)
+    //初始化地图参数
     let t=L.latLngBounds([0, 0], [-66.5, 90]);
     let mapdata = L.map("map", {
       center: [-35, 45],
@@ -43,5 +50,25 @@ function initmap(map){
       return new L.TileLayer.T();
     }
     map.addLayer(L.tileLayer.t());
+    var LayerMap = {
+      Layer_FST: L.layerGroup(),
+    }
+    var typearray = [
+      [LayerMap["Layer_FST"], JS_FST],
+    ];
+    //初始化各个坐标
+    var markers = {};
+    for (let i = 0; i < typearray.length; i++) {
+      L.geoJSON(typearray[i][1], {
+        pointToLayer: function (feature, latlng) {
+          var key = i + "_" + feature.id;
+          var marker = L.marker([latlng.lng, latlng.lat], {
+            alt: `${latlng.lng},${latlng.lat}`
+          }, );
+          markers[key] = marker;
+          return marker.addTo(typearray[i][0]);
+        },
+      })
+    };
 }
 export {initmap}
