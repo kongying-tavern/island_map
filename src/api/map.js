@@ -1,10 +1,9 @@
 import * as L from 'leaflet'
 import "leaflet/dist/leaflet.css";
-import {JS_FST} from '../assets/localdata/test';
+import {islandchest_data} from '../assets/localdata/test';
 
 function initmap(map){
-    let json=JS_FST
-    console.log(json)
+    console.log(islandchest_data);
     //初始化地图参数
     let t=L.latLngBounds([0, 0], [-66.5, 90]);
     let mapdata = L.map("map", {
@@ -46,9 +45,22 @@ function initmap(map){
     L.tileLayer.t = function () {
       return new L.TileLayer.T();
     }
-    L.marker([-51.5, -0.09]).addTo(map)
-    .bindPopup('A pretty CSS3 popup.<br> Easily customizable.')
-    .openPopup();
     map.addLayer(L.tileLayer.t());
+    var layerarray = {
+      island_chest: L.layerGroup(),
+    }
+    var markers = {};
+    L.geoJSON(islandchest_data, {
+      pointToLayer: function (feature, latlng) {
+        var key = 1 + "_" + feature.id;
+        var marker = L.marker([latlng.lng, latlng.lat], {
+          alt: `${latlng.lng},${latlng.lat}`
+        }, );
+        markers[key] = marker;
+        return marker.addTo(layerarray.island_chest);
+      },
+    });
+    console.log(layerarray);
+    L.control.layers(layerarray).addTo(map);
 }
 export {initmap}

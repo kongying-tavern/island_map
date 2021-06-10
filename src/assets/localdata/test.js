@@ -1,30 +1,18 @@
-var JS_FST = {
-    "type": "FeatureCollection",
-    "features": [{
-            "geometry": {
-                "type": "Point",
-                "coordinates": [
-                    -20.64306554672647, 43.09936523437501
-                ]
-            },
-            "type": "Feature",
-            "properties": {
-                "popTitle": "风神瞳",
-                "popupContent": "这是一个风神瞳",
-            },
-            "id": 1
-        },
+var islandchest_data={
+    "type":"FeatureCollection",
+    "features": [
         {
             "geometry": {
                 "type": "Point",
                 "coordinates": [
-                    -16.8886597873816, 45.45043945312501
+                    -46.207715001222,
+                    60.651809927122
                 ]
             },
             "type": "Feature",
             "properties": {
-                "popTitle": "风神瞳",
-                "popupContent": "这是一个风神瞳",
+                "popTitle": "宝箱",
+                "popupContent": "这是一个用羽球击碎墙壁解锁的【普通宝箱】"
             },
             "id": 2
         },
@@ -32,13 +20,14 @@ var JS_FST = {
             "geometry": {
                 "type": "Point",
                 "coordinates": [
-                    -17.518344187852207, 40.58349609375001
+                    -47.341304155746,
+                    58.639519931458
                 ]
             },
             "type": "Feature",
             "properties": {
-                "popTitle": "风神瞳",
-                "popupContent": "这是一个风神瞳",
+                "popTitle": "宝箱",
+                "popupContent": "这是一个击败附近怪物解锁的【普通宝箱】"
             },
             "id": 3
         },
@@ -46,13 +35,14 @@ var JS_FST = {
             "geometry": {
                 "type": "Point",
                 "coordinates": [
-                    -17.748686651728793, 43.70361328125001
+                    -47.274259904288,
+                    57.387076379965
                 ]
             },
             "type": "Feature",
             "properties": {
-                "popTitle": "风神瞳",
-                "popupContent": "这是一个风神瞳",
+                "popTitle": "宝箱",
+                "popupContent": "这是一个触发压感机关并命中元素靶盘解锁的【普通宝箱】"
             },
             "id": 4
         },
@@ -60,13 +50,14 @@ var JS_FST = {
             "geometry": {
                 "type": "Point",
                 "coordinates": [
-                    -20.889607510404367, 47.779541015625
+                    -46.321640661542,
+                    57.528074853493
                 ]
             },
             "type": "Feature",
             "properties": {
-                "popTitle": "风神瞳",
-                "popupContent": "这是一个风神瞳",
+                "popTitle": "宝箱",
+                "popupContent": "这是一个打倒附近的丘丘人解锁的【普通宝箱】"
             },
             "id": 5
         },
@@ -74,41 +65,14 @@ var JS_FST = {
             "geometry": {
                 "type": "Point",
                 "coordinates": [
-                    -18.40665471391907, 45.37353515625001
+                    -48.04259011288,
+                    61.580195077964
                 ]
             },
             "type": "Feature",
             "properties": {
-                "popTitle": "风神瞳",
-                "popupContent": "这是一个风神瞳",
-            },
-            "id": 6
-        },
-        {
-            "geometry": {
-                "type": "Point",
-                "coordinates": [
-                    -20.2725032501349, 42.40722656250001
-                ]
-            },
-            "type": "Feature",
-            "properties": {
-                "popTitle": "风神瞳",
-                "popupContent": "这是一个风神瞳",
-            },
-            "id": 7
-        },
-        {
-            "geometry": {
-                "type": "Point",
-                "coordinates": [
-                    -19.98367396609249, 41.62719726562501
-                ]
-            },
-            "type": "Feature",
-            "properties": {
-                "popTitle": "风神瞳",
-                "popupContent": "这是一个风神瞳",
+                "popTitle": "宝箱",
+                "popupContent": "这是一个触发压感机关并命中元素靶盘解锁的【普通宝箱】"
             },
             "id": 8
         },
@@ -116,13 +80,14 @@ var JS_FST = {
             "geometry": {
                 "type": "Point",
                 "coordinates": [
-                    -19.45623359601801, 42.42919921875001
+                    -51.326036793972,
+                    44.113770358112
                 ]
             },
             "type": "Feature",
             "properties": {
-                "popTitle": "风神瞳",
-                "popupContent": "这是一个风神瞳",
+                "popTitle": "宝箱",
+                "popupContent": "这是一个触发压感机关并命中元素靶盘解锁的【普通宝箱】"
             },
             "id": 9
         },
@@ -130,83 +95,14 @@ var JS_FST = {
             "geometry": {
                 "type": "Point",
                 "coordinates": [
-                    -21.9328547363353, 39.29809570312501
+                    -51.674827689346,
+                    47.307126761007
                 ]
             },
             "type": "Feature",
             "properties": {
-                "popTitle": "风神瞳",
-                "popupContent": "这是一个风神瞳",
-            },
-            "id": 10
-        },
-        {
-            "geometry": {
-                "type": "Point",
-                "coordinates": [
-                    -21.468405577312, 40.10009765625001
-                ]
-            },
-            "type": "Feature",
-            "properties": {
-                "popTitle": "风神瞳",
-                "popupContent": "这是一个风神瞳",
-            },
-            "id": 11
-        },
-        {
-            "geometry": {
-                "type": "Point",
-                "coordinates": [
-                    -23.079731762449878, 41.11083984375001
-                ]
-            },
-            "type": "Feature",
-            "properties": {
-                "popTitle": "风神瞳",
-                "popupContent": "这是一个风神瞳",
-            },
-            "id": 12
-        },
-        {
-            "geometry": {
-                "type": "Point",
-                "coordinates": [
-                    -25.244695951306028, 45.90087890625
-                ]
-            },
-            "type": "Feature",
-            "properties": {
-                "popTitle": "风神瞳",
-                "popupContent": "这是一个风神瞳",
-            },
-            "id": 13
-        },
-        {
-            "geometry": {
-                "type": "Point",
-                "coordinates": [
-                    -23.725011735951796, 48.01025390625001
-                ]
-            },
-            "type": "Feature",
-            "properties": {
-                "popTitle": "风神瞳",
-                "popupContent": "这是一个风神瞳",
-            },
-            "id": 14
-        },
-        {
-            "geometry": {
-                "type": "Point",
-                "coordinates": [
-                    -26.95145308349826, 44.659423828125
-                ]
-            },
-            "type": "Feature",
-            "properties": {
-                "popTitle": "风神瞳",
-                "popupContent": "这是一个风神瞳",
+                "popTitle": "宝箱",
+                "popupContent": "这是一个触发压感机关并命中元素靶盘出现的【普通宝箱】"
             },
             "id": 15
         },
@@ -214,27 +110,14 @@ var JS_FST = {
             "geometry": {
                 "type": "Point",
                 "coordinates": [
-                    -24.27701247166408, 49.83398437500001
+                    -46.664517417542,
+                    59.022212997909
                 ]
             },
             "type": "Feature",
             "properties": {
-                "popTitle": "风神瞳",
-                "popupContent": "这是一个风神瞳",
-            },
-            "id": 16
-        },
-        {
-            "geometry": {
-                "type": "Point",
-                "coordinates": [
-                    -22.43134015636061, 50.174560546875
-                ]
-            },
-            "type": "Feature",
-            "properties": {
-                "popTitle": "风神瞳",
-                "popupContent": "这是一个风神瞳",
+                "popTitle": "宝箱",
+                "popupContent": "这是一个在峭壁上射爆蓬蓬果出现的【普通宝箱】"
             },
             "id": 17
         },
@@ -242,41 +125,14 @@ var JS_FST = {
             "geometry": {
                 "type": "Point",
                 "coordinates": [
-                    -23.059516273509317, 51.27319335937501
+                    -39.45033330742,
+                    61.101083105204
                 ]
             },
             "type": "Feature",
             "properties": {
-                "popTitle": "风神瞳",
-                "popupContent": "这是一个风神瞳",
-            },
-            "id": 18
-        },
-        {
-            "geometry": {
-                "type": "Point",
-                "coordinates": [
-                    -22.044913300245675, 51.36108398437501
-                ]
-            },
-            "type": "Feature",
-            "properties": {
-                "popTitle": "风神瞳",
-                "popupContent": "这是一个风神瞳",
-            },
-            "id": 19
-        },
-        {
-            "geometry": {
-                "type": "Point",
-                "coordinates": [
-                    -20.971698530475734, 50.63598632812501
-                ]
-            },
-            "type": "Feature",
-            "properties": {
-                "popTitle": "风神瞳",
-                "popupContent": "这是一个风神瞳",
+                "popTitle": "宝箱",
+                "popupContent": "这是一个用羽球击碎（？）墙面解锁的【普通宝箱】"
             },
             "id": 20
         },
@@ -284,27 +140,14 @@ var JS_FST = {
             "geometry": {
                 "type": "Point",
                 "coordinates": [
-                    -20.16941122761028, 50.504150390625
+                    -41.592166332773,
+                    62.540416849029
                 ]
             },
             "type": "Feature",
             "properties": {
-                "popTitle": "风神瞳",
-                "popupContent": "这是一个风神瞳",
-            },
-            "id": 21
-        },
-        {
-            "geometry": {
-                "type": "Point",
-                "coordinates": [
-                    -20.879342971957897, 52.20703125000001
-                ]
-            },
-            "type": "Feature",
-            "properties": {
-                "popTitle": "风神瞳",
-                "popupContent": "这是一个风神瞳",
+                "popTitle": "宝箱",
+                "popupContent": "这是一个触发压感机关并用羽球完成元素靶盘解密解锁的【普通宝箱】"
             },
             "id": 22
         },
@@ -312,55 +155,14 @@ var JS_FST = {
             "geometry": {
                 "type": "Point",
                 "coordinates": [
-                    -24.86650252692691, 51.24023437500001
+                    -52.326387332528,
+                    44.221809847265
                 ]
             },
             "type": "Feature",
             "properties": {
-                "popTitle": "风神瞳",
-                "popupContent": "这是一个风神瞳",
-            },
-            "id": 23
-        },
-        {
-            "geometry": {
-                "type": "Point",
-                "coordinates": [
-                    -25.859223554761392, 52.16308593750001
-                ]
-            },
-            "type": "Feature",
-            "properties": {
-                "popTitle": "风神瞳",
-                "popupContent": "这是一个风神瞳",
-            },
-            "id": 24
-        },
-        {
-            "geometry": {
-                "type": "Point",
-                "coordinates": [
-                    -26.82407078047018, 51.15234375
-                ]
-            },
-            "type": "Feature",
-            "properties": {
-                "popTitle": "风神瞳",
-                "popupContent": "这是一个风神瞳",
-            },
-            "id": 25
-        },
-        {
-            "geometry": {
-                "type": "Point",
-                "coordinates": [
-                    -28.188243641850313, 51.756591796875
-                ]
-            },
-            "type": "Feature",
-            "properties": {
-                "popTitle": "风神瞳",
-                "popupContent": "这是一个风神瞳",
+                "popTitle": "宝箱",
+                "popupContent": "这是一个在区域内用羽球击碎墙壁解锁的【普通宝箱】\n"
             },
             "id": 26
         },
@@ -368,13 +170,14 @@ var JS_FST = {
             "geometry": {
                 "type": "Point",
                 "coordinates": [
-                    -29.516110386062277, 53.03100585937501
+                    -52.763999857157,
+                    44.459841671622
                 ]
             },
             "type": "Feature",
             "properties": {
-                "popTitle": "风神瞳",
-                "popupContent": "这是一个风神瞳",
+                "popTitle": "宝箱",
+                "popupContent": "这是一个触发压感机关并命中元素靶盘解锁的【普通宝箱】\n"
             },
             "id": 27
         },
@@ -382,27 +185,14 @@ var JS_FST = {
             "geometry": {
                 "type": "Point",
                 "coordinates": [
-                    -28.22697003891834, 55.92041015625001
+                    -51.342062022556,
+                    49.282842031411
                 ]
             },
             "type": "Feature",
             "properties": {
-                "popTitle": "风神瞳",
-                "popupContent": "这是一个风神瞳",
-            },
-            "id": 28
-        },
-        {
-            "geometry": {
-                "type": "Point",
-                "coordinates": [
-                    -31.240985378021307, 55.18432617187501
-                ]
-            },
-            "type": "Feature",
-            "properties": {
-                "popTitle": "风神瞳",
-                "popupContent": "这是一个风神瞳",
+                "popTitle": "宝箱",
+                "popupContent": "这是一个击碎巨岩开启的【普通宝箱】\n"
             },
             "id": 29
         },
@@ -410,41 +200,14 @@ var JS_FST = {
             "geometry": {
                 "type": "Point",
                 "coordinates": [
-                    -32.166312956967346, 50.92163085937501
+                    -52.154837811526,
+                    45.199584301747
                 ]
             },
             "type": "Feature",
             "properties": {
-                "popTitle": "风神瞳",
-                "popupContent": "这是一个风神瞳",
-            },
-            "id": 30
-        },
-        {
-            "geometry": {
-                "type": "Point",
-                "coordinates": [
-                    -33.42227225886604, 49.09790039062501
-                ]
-            },
-            "type": "Feature",
-            "properties": {
-                "popTitle": "风神瞳",
-                "popupContent": "这是一个风神瞳",
-            },
-            "id": 31
-        },
-        {
-            "geometry": {
-                "type": "Point",
-                "coordinates": [
-                    -34.04355650412745, 51.49291992187501
-                ]
-            },
-            "type": "Feature",
-            "properties": {
-                "popTitle": "风神瞳",
-                "popupContent": "这是一个风神瞳",
+                "popTitle": "宝箱",
+                "popupContent": "这是一个在高空直接开启的【普通宝箱】\n注：在右侧小岛完成限时抵达挑战会途经"
             },
             "id": 32
         },
@@ -452,69 +215,14 @@ var JS_FST = {
             "geometry": {
                 "type": "Point",
                 "coordinates": [
-                    -30.259067203213018, 57.35961914062501
+                    -31.063908200223,
+                    56.242674462868
                 ]
             },
             "type": "Feature",
             "properties": {
-                "popTitle": "风神瞳",
-                "popupContent": "这是一个风神瞳",
-            },
-            "id": 33
-        },
-        {
-            "geometry": {
-                "type": "Point",
-                "coordinates": [
-                    -30.221101852485987, 58.94165039062501
-                ]
-            },
-            "type": "Feature",
-            "properties": {
-                "popTitle": "风神瞳",
-                "popupContent": "这是一个风神瞳",
-            },
-            "id": 34
-        },
-        {
-            "geometry": {
-                "type": "Point",
-                "coordinates": [
-                    -32.30570601389429, 60.10620117187501
-                ]
-            },
-            "type": "Feature",
-            "properties": {
-                "popTitle": "风神瞳",
-                "popupContent": "这是一个风神瞳",
-            },
-            "id": 35
-        },
-        {
-            "geometry": {
-                "type": "Point",
-                "coordinates": [
-                    -32.68561985372199, 61.32568359375001
-                ]
-            },
-            "type": "Feature",
-            "properties": {
-                "popTitle": "风神瞳",
-                "popupContent": "这是一个风神瞳",
-            },
-            "id": 36
-        },
-        {
-            "geometry": {
-                "type": "Point",
-                "coordinates": [
-                    -33.35806161277886, 61.42456054687501
-                ]
-            },
-            "type": "Feature",
-            "properties": {
-                "popTitle": "风神瞳",
-                "popupContent": "这是一个风神瞳",
+                "popTitle": "宝箱",
+                "popupContent": "这是一个射爆蓬蓬果出现的【普通宝箱】"
             },
             "id": 37
         },
@@ -522,13 +230,14 @@ var JS_FST = {
             "geometry": {
                 "type": "Point",
                 "coordinates": [
-                    -34.7506398050501, 62.22656250000001
+                    -30.820493495165,
+                    56.035762311076
                 ]
             },
             "type": "Feature",
             "properties": {
-                "popTitle": "风神瞳",
-                "popupContent": "这是一个风神瞳",
+                "popTitle": "宝箱",
+                "popupContent": "这是一个直接开启的【普通宝箱】"
             },
             "id": 38
         },
@@ -536,27 +245,14 @@ var JS_FST = {
             "geometry": {
                 "type": "Point",
                 "coordinates": [
-                    -31.522361470421437, 62.87475585937501
+                    -30.364966929435,
+                    53.876944376356
                 ]
             },
             "type": "Feature",
             "properties": {
-                "popTitle": "风神瞳",
-                "popupContent": "这是一个风神瞳",
-            },
-            "id": 39
-        },
-        {
-            "geometry": {
-                "type": "Point",
-                "coordinates": [
-                    -32.73184089686568, 65.08300781250001
-                ]
-            },
-            "type": "Feature",
-            "properties": {
-                "popTitle": "风神瞳",
-                "popupContent": "这是一个风神瞳",
+                "popTitle": "宝箱",
+                "popupContent": "这是一个直接开启的【普通宝箱】"
             },
             "id": 40
         },
@@ -564,27 +260,14 @@ var JS_FST = {
             "geometry": {
                 "type": "Point",
                 "coordinates": [
-                    -33.988918483762156, 65.81909179687501
+                    -29.875570558376,
+                    53.798220577872
                 ]
             },
             "type": "Feature",
             "properties": {
-                "popTitle": "风神瞳",
-                "popupContent": "这是一个风神瞳",
-            },
-            "id": 41
-        },
-        {
-            "geometry": {
-                "type": "Point",
-                "coordinates": [
-                    -35.20972164522138, 65.30273437500001
-                ]
-            },
-            "type": "Feature",
-            "properties": {
-                "popTitle": "风神瞳",
-                "popupContent": "这是一个风神瞳",
+                "popTitle": "宝箱",
+                "popupContent": "这是一个击败接近出现的两只炽热骗骗花解锁的【普通宝箱】"
             },
             "id": 42
         },
@@ -592,27 +275,14 @@ var JS_FST = {
             "geometry": {
                 "type": "Point",
                 "coordinates": [
-                    -35.82672127366604, 68.40087890625001
+                    -32.415512774973,
+                    53.867799169944
                 ]
             },
             "type": "Feature",
             "properties": {
-                "popTitle": "风神瞳",
-                "popupContent": "这是一个风神瞳",
-            },
-            "id": 43
-        },
-        {
-            "geometry": {
-                "type": "Point",
-                "coordinates": [
-                    -38.84826438869912, 66.30249023437501
-                ]
-            },
-            "type": "Feature",
-            "properties": {
-                "popTitle": "风神瞳",
-                "popupContent": "这是一个风神瞳",
+                "popTitle": "宝箱",
+                "popupContent": "这是一个触发压感机关并命中元素靶盘解锁的【普通宝箱】"
             },
             "id": 44
         },
@@ -620,55 +290,14 @@ var JS_FST = {
             "geometry": {
                 "type": "Point",
                 "coordinates": [
-                    -37.483576550426996, 69.73022460937501
+                    -30.153049833162,
+                    56.947627545451
                 ]
             },
             "type": "Feature",
             "properties": {
-                "popTitle": "风神瞳",
-                "popupContent": "这是一个风神瞳",
-            },
-            "id": 45
-        },
-        {
-            "geometry": {
-                "type": "Point",
-                "coordinates": [
-                    -37.002552672159545, 68.00537109375001
-                ]
-            },
-            "type": "Feature",
-            "properties": {
-                "popTitle": "风神瞳",
-                "popupContent": "这是一个风神瞳",
-            },
-            "id": 46
-        },
-        {
-            "geometry": {
-                "type": "Point",
-                "coordinates": [
-                    -35.666222341034775, 73.09204101562501
-                ]
-            },
-            "type": "Feature",
-            "properties": {
-                "popTitle": "风神瞳",
-                "popupContent": "这是一个风神瞳",
-            },
-            "id": 47
-        },
-        {
-            "geometry": {
-                "type": "Point",
-                "coordinates": [
-                    -30.287531589298727, 61.18286132812501
-                ]
-            },
-            "type": "Feature",
-            "properties": {
-                "popTitle": "风神瞳",
-                "popupContent": "这是一个风神瞳",
+                "popTitle": "宝箱",
+                "popupContent": "这是一个草丛中直接开启的【普通宝箱】"
             },
             "id": 48
         },
@@ -676,69 +305,14 @@ var JS_FST = {
             "geometry": {
                 "type": "Point",
                 "coordinates": [
-                    -30.6662659463233, 63.41308593750001
+                    -29.124963446495,
+                    42.460321204228
                 ]
             },
             "type": "Feature",
             "properties": {
-                "popTitle": "风神瞳",
-                "popupContent": "这是一个风神瞳",
-            },
-            "id": 49
-        },
-        {
-            "geometry": {
-                "type": "Point",
-                "coordinates": [
-                    -31.09998179374943, 64.68750000000001
-                ]
-            },
-            "type": "Feature",
-            "properties": {
-                "popTitle": "风神瞳",
-                "popupContent": "这是一个风神瞳",
-            },
-            "id": 50
-        },
-        {
-            "geometry": {
-                "type": "Point",
-                "coordinates": [
-                    -29.869228848968312, 63.58886718750001
-                ]
-            },
-            "type": "Feature",
-            "properties": {
-                "popTitle": "风神瞳",
-                "popupContent": "这是一个风神瞳",
-            },
-            "id": 51
-        },
-        {
-            "geometry": {
-                "type": "Point",
-                "coordinates": [
-                    -29.200123477644983, 65.46752929687501
-                ]
-            },
-            "type": "Feature",
-            "properties": {
-                "popTitle": "风神瞳",
-                "popupContent": "这是一个风神瞳",
-            },
-            "id": 52
-        },
-        {
-            "geometry": {
-                "type": "Point",
-                "coordinates": [
-                    -28.478348692223175, 63.53393554687501
-                ]
-            },
-            "type": "Feature",
-            "properties": {
-                "popTitle": "风神瞳",
-                "popupContent": "这是一个风神瞳",
+                "popTitle": "宝箱",
+                "popupContent": "这是一个击败怪物解锁的【普通宝箱】\n"
             },
             "id": 53
         },
@@ -746,27 +320,14 @@ var JS_FST = {
             "geometry": {
                 "type": "Point",
                 "coordinates": [
-                    -25.274503517820154, 63.51196289062501
+                    -37.07853337653,
+                    38.679213073249
                 ]
             },
             "type": "Feature",
             "properties": {
-                "popTitle": "风神瞳",
-                "popupContent": "这是一个风神瞳",
-            },
-            "id": 54
-        },
-        {
-            "geometry": {
-                "type": "Point",
-                "coordinates": [
-                    -26.185018250078308, 67.86254882812501
-                ]
-            },
-            "type": "Feature",
-            "properties": {
-                "popTitle": "风神瞳",
-                "popupContent": "这是一个风神瞳",
+                "popTitle": "宝箱",
+                "popupContent": "这是一个射爆蓬蓬果出现的【普通宝箱】\n"
             },
             "id": 55
         },
@@ -774,13 +335,14 @@ var JS_FST = {
             "geometry": {
                 "type": "Point",
                 "coordinates": [
-                    -24.946219074360084, 70.94970703125001
+                    -38.046654208094,
+                    37.758179537799
                 ]
             },
             "type": "Feature",
             "properties": {
-                "popTitle": "风神瞳",
-                "popupContent": "这是一个风神瞳",
+                "popTitle": "宝箱",
+                "popupContent": "这是一个直接开启的【普通宝箱】\n"
             },
             "id": 56
         },
@@ -788,128 +350,392 @@ var JS_FST = {
             "geometry": {
                 "type": "Point",
                 "coordinates": [
-                    -22.715390019335942, 68.99414062500001
+                    -38.448529854831,
+                    38.738584563506
                 ]
             },
             "type": "Feature",
             "properties": {
-                "popTitle": "风神瞳",
-                "popupContent": "这是一个风神瞳",
+                "popTitle": "宝箱",
+                "popupContent": "这是一个直接开启的【普通宝箱】"
             },
-            "id": 57
+            "id": 67
         },
         {
             "geometry": {
                 "type": "Point",
                 "coordinates": [
-                    -19.093266636089712, 62.52319335937501
+                    -35.272541599863,
+                    40.634766943382
                 ]
             },
             "type": "Feature",
             "properties": {
-                "popTitle": "风神瞳",
-                "popupContent": "这是一个风神瞳",
+                "popTitle": "宝箱",
+                "popupContent": "这是一个击败怪物解锁的【普通宝箱】"
             },
-            "id": 58
+            "id": 73
         },
         {
             "geometry": {
                 "type": "Point",
                 "coordinates": [
-                    -17.151288449816732, 61.13891601562501
+                    -35.110086749901,
+                    41.553063148457
                 ]
             },
             "type": "Feature",
             "properties": {
-                "popTitle": "风神瞳",
-                "popupContent": "这是一个风神瞳",
+                "popTitle": "宝箱",
+                "popupContent": "这是一个直接开启的【普通宝箱】"
             },
-            "id": 59
+            "id": 74
         },
         {
             "geometry": {
                 "type": "Point",
                 "coordinates": [
-                    -18.490028573953296, 68.26904296875001
+                    -37.193835661244,
+                    41.95316493276
                 ]
             },
             "type": "Feature",
             "properties": {
-                "popTitle": "风神瞳",
-                "popupContent": "这是一个风神瞳",
+                "popTitle": "宝箱",
+                "popupContent": "这是一个在山腰直接开启的【普通宝箱】"
             },
-            "id": 60
+            "id": 76
         },
         {
             "geometry": {
                 "type": "Point",
                 "coordinates": [
-                    -16.425547506916725, 71.43310546875001
+                    -35.148827738375,
+                    35.575270753397
                 ]
             },
             "type": "Feature",
             "properties": {
-                "popTitle": "风神瞳",
-                "popupContent": "这是一个风神瞳",
+                "popTitle": "宝箱",
+                "popupContent": "这是一个在山腰射爆蓬蓬果出现的【普通宝箱】"
             },
-            "id": 61
+            "id": 77
         },
         {
             "geometry": {
                 "type": "Point",
                 "coordinates": [
-                    -21.04349121680354, 79.89257812500001
+                    -27.91030412718,
+                    40.028688668681
                 ]
             },
             "type": "Feature",
             "properties": {
-                "popTitle": "风神瞳",
-                "popupContent": "这是一个风神瞳",
+                "popTitle": "宝箱",
+                "popupContent": "这是一个直接开启的【普通宝箱】"
             },
-            "id": 62
+            "id": 79
         },
         {
             "geometry": {
                 "type": "Point",
                 "coordinates": [
-                    -33.85216970140741, 83.60595703125001
+                    -29.953340049403,
+                    37.602546816611
                 ]
             },
             "type": "Feature",
             "properties": {
-                "popTitle": "风神瞳",
-                "popupContent": "这是一个风神瞳",
+                "popTitle": "宝箱",
+                "popupContent": "这是一个在水面上打倒丘丘人解锁的【普通宝箱】"
             },
-            "id": 63
+            "id": 80
         },
         {
             "geometry": {
                 "type": "Point",
                 "coordinates": [
-                    -20.68418377935238, 54.92065429687501
+                    -40.018349011474,
+                    39.165460327176
                 ]
             },
             "type": "Feature",
             "properties": {
-                "popTitle": "风神瞳",
-                "popupContent": "这是一个风神瞳",
+                "popTitle": "宝箱",
+                "popupContent": "这是一个击碎礁石上三个小石堆出现的【普通宝箱】"
             },
-            "id": 64
+            "id": 82
         },
         {
             "geometry": {
                 "type": "Point",
                 "coordinates": [
-                    -21.524627220545284, 55.61279296875001
+                    -38.588227442171,
+                    38.81835343079
                 ]
             },
             "type": "Feature",
             "properties": {
-                "popTitle": "风神瞳",
-                "popupContent": "这是一个风神瞳",
+                "popTitle": "宝箱",
+                "popupContent": "这是一个在山顶直接开启的【普通宝箱】"
             },
-            "id": 65
+            "id": 83
         },
+        {
+            "geometry": {
+                "type": "Point",
+                "coordinates": [
+                    -26.406630642557,
+                    38.073120117188
+                ]
+            },
+            "type": "Feature",
+            "properties": {
+                "popTitle": "宝箱",
+                "popupContent": "这是一个半山腰直接可以开启（？）的【普通宝箱】"
+            },
+            "id": 86
+        },
+        {
+            "geometry": {
+                "type": "Point",
+                "coordinates": [
+                    -27.015090326515,
+                    38.106079101563
+                ]
+            },
+            "type": "Feature",
+            "properties": {
+                "popTitle": "宝箱",
+                "popupContent": "这是一个半山腰直接可以开启（？）的【普通宝箱】"
+            },
+            "id": 88
+        },
+        {
+            "geometry": {
+                "type": "Point",
+                "coordinates": [
+                    -26.554136386184,
+                    39.034423828125
+                ]
+            },
+            "type": "Feature",
+            "properties": {
+                "popTitle": "宝箱",
+                "popupContent": "这是一个半山腰直接可以开启的【普通宝箱】"
+            },
+            "id": 89
+        },
+        {
+            "geometry": {
+                "type": "Point",
+                "coordinates": [
+                    -50.888013013338,
+                    50.040898336694
+                ]
+            },
+            "type": "Feature",
+            "properties": {
+                "popTitle": "宝箱",
+                "popupContent": "这是一个击败怪物解锁的【普通宝箱】"
+            },
+            "id": 90
+        },
+        {
+            "geometry": {
+                "type": "Point",
+                "coordinates": [
+                    -27.526136914376,
+                    40.479128121806
+                ]
+            },
+            "type": "Feature",
+            "properties": {
+                "popTitle": "宝箱",
+                "popupContent": "这是一个击败怪物解锁的【普通宝箱】"
+            },
+            "id": 92
+        },
+        {
+            "geometry": {
+                "type": "Point",
+                "coordinates": [
+                    -27.796971549333,
+                    40.310689906225
+                ]
+            },
+            "type": "Feature",
+            "properties": {
+                "popTitle": "宝箱",
+                "popupContent": "这是一个接近山顶处可以直接开启的【普通宝箱】"
+            },
+            "id": 93
+        },
+        {
+            "geometry": {
+                "type": "Point",
+                "coordinates": [
+                    -26.700923016407,
+                    38.613804197831
+                ]
+            },
+            "type": "Feature",
+            "properties": {
+                "popTitle": "宝箱",
+                "popupContent": "这是一个山顶处击败怪物解锁的【普通宝箱】"
+            },
+            "id": 94
+        },
+        {
+            "geometry": {
+                "type": "Point",
+                "coordinates": [
+                    -22.38392169659,
+                    25.429675611581
+                ]
+            },
+            "type": "Feature",
+            "properties": {
+                "popTitle": "宝箱",
+                "popupContent": "这是一个在爱心山洞内直接开启的【普通宝箱】"
+            },
+            "id": 95
+        },
+        {
+            "geometry": {
+                "type": "Point",
+                "coordinates": [
+                    -27.241597315801,
+                    40.638427734375
+                ]
+            },
+            "type": "Feature",
+            "properties": {
+                "popTitle": "宝箱",
+                "popupContent": "这是一个直接开启的【普通宝箱】"
+            },
+            "id": 96
+        },
+        {
+            "geometry": {
+                "type": "Point",
+                "coordinates": [
+                    -26.050205429514,
+                    39.649653912639
+                ]
+            },
+            "type": "Feature",
+            "properties": {
+                "popTitle": "宝箱",
+                "popupContent": "这是一个击败此处和隔壁礁石上四个小石堆出现的【普通宝箱】"
+            },
+            "id": 97
+        },
+        {
+            "geometry": {
+                "type": "Point",
+                "coordinates": [
+                    -25.011569954982,
+                    39.706057190127
+                ]
+            },
+            "type": "Feature",
+            "properties": {
+                "popTitle": "宝箱",
+                "popupContent": "这是一个击败怪物解锁的【普通宝箱】"
+            },
+            "id": 98
+        },
+        {
+            "geometry": {
+                "type": "Point",
+                "coordinates": [
+                    -34.530693386269,
+                    58.727419137431
+                ]
+            },
+            "type": "Feature",
+            "properties": {
+                "popTitle": "宝箱",
+                "popupContent": "这是一个触发压感机关并命中元素靶盘解锁的【普通宝箱】"
+            },
+            "id": 99
+        },
+        {
+            "geometry": {
+                "type": "Point",
+                "coordinates": [
+                    -35.439241695106,
+                    60.773094685533
+                ]
+            },
+            "type": "Feature",
+            "properties": {
+                "popTitle": "宝箱",
+                "popupContent": "这是一个击败附近全部草史莱姆解锁的【普通宝箱】"
+            },
+            "id": 102
+        },
+        {
+            "geometry": {
+                "type": "Point",
+                "coordinates": [
+                    -33.399348685615,
+                    55.748291507145
+                ]
+            },
+            "type": "Feature",
+            "properties": {
+                "popTitle": "宝箱",
+                "popupContent": "这是一个击碎巨岩出现的【普通宝箱】"
+            },
+            "id": 112
+        },
+        {
+            "geometry": {
+                "type": "Point",
+                "coordinates": [
+                    -33.908494613795,
+                    58.882062230801
+                ]
+            },
+            "type": "Feature",
+            "properties": {
+                "popTitle": "宝箱",
+                "popupContent": "这是一个这是一个触发压感机关并命中元素靶盘解锁的【普通宝箱】"
+            },
+            "id": 115
+        },
+        {
+            "geometry": {
+                "type": "Point",
+                "coordinates": [
+                    -28.877436359624,
+                    37.875166422009
+                ]
+            },
+            "type": "Feature",
+            "properties": {
+                "popTitle": "宝箱",
+                "popupContent": "这是一个悬崖边上击败怪物解锁的【普通宝箱】"
+            },
+            "id": 118
+        },
+        {
+            "geometry": {
+                "type": "Point",
+                "coordinates": [
+                    -53.541493321191,
+                    45.284817929921
+                ]
+            },
+            "type": "Feature",
+            "properties": {
+                "popTitle": "宝箱",
+                "popupContent": "这是一个直接开启的【普通宝箱】"
+            },
+            "id": 120
+        }
     ]
-};
-export {JS_FST}
+}
+export {islandchest_data}
