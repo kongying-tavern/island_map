@@ -1,33 +1,42 @@
 <template>
   <div class="main">
       <div id="map"></div>
-      <!-- <picker></picker> -->
+      <picker></picker>
   </div>
 </template>
 
 <script>
-import {initmap} from '../api/map.js'
-// import picker from '../component/picker.vue'
+import {initmap,togglelayer} from '../api/map.js'
+import picker from '../component/picker.vue'
 export default {
   data() {
     return {
       map:''
     }
   },
-  // component:{
-  //   picker
-  // },
+  components:{
+    picker
+  },
   name: 'index',
   methods: {
+    test1(){
+      togglelayer(this.map)
+    },
   },
   mounted() {
-    initmap(this.map);
+    this.map=initmap(this.map);
   },
 }
 </script>
-<style>
+<style scoped>
 #map{
   width:100%;
   height:100vh;
+}
+.testbtn{
+  position:absolute;
+  z-index: 9999;
+  top: 25%;
+  left: 25%;
 }
 </style>
