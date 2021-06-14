@@ -8,7 +8,10 @@ import * as L from 'leaflet'
 import "leaflet/dist/leaflet.css";
 //引入axios
 import axios from 'axios'
-
+//引入antd
+import Antd from 'ant-design-vue';
+import 'ant-design-vue/dist/antd.css';
+Vue.use(Antd);
 Vue.use(VueI18n)
 
 Vue.prototype.$axios = axios
