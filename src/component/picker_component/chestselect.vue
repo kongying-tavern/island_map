@@ -1,12 +1,18 @@
 <template>
   <div class="chestselect">
+    <!-- 切换效果依赖于antd的走马图控件 -->
     <a-carousel :dots="false" ref="varousel">
       <div class="typeselect">
         <div class="selector_list">
-          <li class="selector_list_option" :class="{on:select_on}">
+          <li
+            class="selector_list_option"
+            :class="{ on: select_on }"
+            @click="option_swtich"
+          >
             <i class="options_icon"></i>
             <div class="options_info">
               <span class="options_name">普通宝箱</span>
+              <!-- 通过设置进度条的宽度百分比来展现该点位的进度情况 -->
               <span class="options_count">1/100</span>
               <div class="progress">
                 <div class="progress_finish"></div>
@@ -21,7 +27,6 @@
           <li class="selector_list_option"></li>
           <li class="selector_list_option"></li>
         </div>
-        
       </div>
       <div class="methodselect">2</div>
     </a-carousel>
@@ -33,11 +38,14 @@ export default {
   name: "chestselect",
   data() {
     return {
-      select_on:false
+      select_on: false,
     };
   },
   props: ["btnindex"],
-  method: {
+  methods: {
+    option_swtich() {
+      this.select_on = !this.select_on;
+    },
   },
   computed: {},
   watch: {
@@ -48,6 +56,11 @@ export default {
   },
   mounted() {
     console.log(this.btnindex);
+    //请求所有点位类型
+    this.$axios({
+        method: 'get',
+        url: 'http://8.129.180.37:8089/api/option',
+    })
   },
 };
 </script>
@@ -99,7 +112,7 @@ export default {
         height: 22px;
         line-height: 22px;
         font-size: 18px;
-        color: #8D807D;
+        color: #8d807d;
       }
       .options_count {
         height: 16px;
@@ -114,18 +127,18 @@ export default {
         background: #817472;
         border-radius: 2px;
       }
-      .progress_finish
-      {
+      .progress_finish {
         width: 40%;
         height: 3px;
-        background: #00F5FF;
+        background: #00f5ff;
         border-radius: 2px;
       }
     }
-    .selector_list_option.on{
+    .selector_list_option.on {
       background: url(../../assets/Content_img/item_selected.png) no-repeat;
-      .options_name,.options_count {
-        color: #FFFADE;
+      .options_name,
+      .options_count {
+        color: #fffade;
       }
     }
   }
