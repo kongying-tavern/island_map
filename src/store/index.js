@@ -5,8 +5,14 @@ Vue.use(Vuex)
 
 export default new Vuex.Store({
   state: {
+    //点位类型
+    options_type:''
   },
   mutations: {
+    update_type(state,type)
+    {
+      state.options_type=type;
+    },
   },
   actions: {
   },
