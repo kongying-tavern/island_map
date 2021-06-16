@@ -1,0 +1,95 @@
+.picker_area2
+{
+    position: relative;
+    width: 448px;
+    height: 470px;
+    margin: 28px auto 0;
+    .picker_area2_cover{
+        position: absolute;
+        top: 0;
+        left: 3%;
+        width: 94%;
+        height: 20px;
+        background: #9F9089;
+        border-radius: 5px;
+    }
+    .picker_area2_containor
+    {
+        z-index: 10;
+        position: relative;
+        width: 100%;
+        height: 100%;
+        padding-bottom: 10px;
+        margin: 5px 0 0 7px;
+        background:#F0E9E2;
+        border-radius: 5px;
+    }
+    .item-selector-options
+    {
+        display: flex;
+        width: 400px;
+        margin: 20px auto;
+    }
+    .picker_area2_header
+    {
+        width: 95%;
+        margin: 10px auto 0;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        .item_type{
+            width: 48px;
+            list-style-type: none;
+            cursor: pointer;
+        }
+        .item_type_icon{
+            display: block;
+            width: 36px;
+            height: 36px;
+            margin: 0 auto 0;
+        }
+        .item_type_name
+        {
+            display: block;
+            width: 100%;
+            margin-top: 5px;
+            text-align: center;
+            color: #8D807D;
+            font-size: 16px;
+        }
+        .item_type_name.on
+        {
+            background: #4A5366;
+            border-radius: 12px;
+            color: #FFFADE;
+        }
+    }
+    .picker_area2_main_cover
+    {
+        width: 410px;
+        height: 350px;
+        margin: 15px auto 0;
+        background: #D0C8C4;
+        box-shadow: 0px 0px 8px 0px rgba(96, 81, 48, 0.15);
+        border: 1px solid #D0C8C4;
+        border-radius: 5px;
+    }
+    .picker_area2_main{
+        width: 97%;
+        height: 330px;
+        margin: 10px auto;
+        padding-right: 3px;
+        overflow: hidden scroll;
+    }
+    .picker_area2_main::-webkit-scrollbar {
+        width: 8px;
+        background: #f0e9e2;
+        border-radius: 4px;
+    }
+    .picker_area2_main::-webkit-scrollbar-thumb {
+        width: 8px;
+        height: 10px;
+        background: #685e5c;
+        border-radius: 4px;
+    }
+}

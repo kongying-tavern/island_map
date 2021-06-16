@@ -1,62 +1,99 @@
 <template>
-  <div class="chestselect">
-    <!-- 切换效果依赖于antd的走马图控件 -->
-    <a-carousel :dots="false" ref="varousel" :before-change="beforechange" :after-change="afterchange">
-      <div class="typeselect">
-        <div class="selector_list">
-          <li
-            class="selector_list_option"
-            :class="{
-              on:
-                //检测当前option的index是否已存在于数组中（即该项是否已被选中），根据其选中状态切换样式
-                selected_type.find(item => item == index) == undefined
-                  ? select_on
-                  : !select_on
-            }"
-            @click="option_swtich(index)"
-            v-for="(i, index) in chesttype"
-            :key="i.name"
+  <div class="picker_area1">
+    <div style="width: 100%; height: 1px"></div>
+    <div class="picker_area1_cover"></div>
+    <div class="picker_area1_containor">
+      <div class="picker_area1_header">
+        <h3>
+          <i class="picker_area1_header_icon"></i>
+          <span>宝箱筛选</span>
+        </h3>
+        <div class="switch_btn">
+          <div :class="switch_btn_class"></div>
+          <span
+            :class="{ selected_span: selected_span }"
+            @click="swtich_class(selected_span, 0)"
+            style="margin-left:3px"
+            >宝箱种类</span
           >
-            <i class="options_icon"></i>
-            <div class="options_info">
-              <span class="options_name">{{ i.name }}</span>
-              <span class="options_count">1/{{ i.count }}</span>
-              <!-- 通过设置进度条的宽度百分比来展现该点位的进度情况 -->
-              <div class="progress">
-                <div class="progress_finish"></div>
-              </div>
-            </div>
-          </li>
-        </div>
-      </div>
-      <div class="methodselect">
-        <div class="selector_list">
-          <li
-            class="selector_list_option"
-            :class="{
-              on:
-                //检测当前option的id是否已存在于数组中（即该项是否已被选中），根据其选中状态切换样式
-                selected_type.find(item => item == i.id) == undefined
-                  ? select_on
-                  : !select_on
-            }"
-            @click="option_swtich(i.id)"
-            v-for=" i in chesttype"
-            :key="i.name"
+          <span
+            :class="{ selected_span: !selected_span }"
+            @click="swtich_class(!selected_span, 1)"
+            >获取方式</span
           >
-            <i class="options_icon"></i>
-            <div class="options_info">
-              <span class="options_name">{{ i.name }}</span>
-              <span class="options_count">1/{{ i.count }}</span>
-              <!-- 通过设置进度条的宽度百分比来展现该点位的进度情况 -->
-              <div class="progress">
-                <div class="progress_finish"></div>
-              </div>
-            </div>
-          </li>
         </div>
+        <a
+          href="javascript:;"
+          class="fold_btn"
+          @click="panel_fold"
+          :class="{ off: isoff }"
+        ></a>
       </div>
-    </a-carousel>
+      <div class="picker_area1_main" :class="{ off: !isoff }">
+        <!-- 切换效果依赖于antd的走马图控件 -->
+        <a-carousel
+          :dots="false"
+          ref="varousel"
+          :before-change="beforechange"
+          :after-change="afterchange"
+        >
+          <div class="typeselect">
+            <div class="selector_list">
+              <li
+                class="selector_list_option"
+                :class="{
+                  on:
+                    //检测当前option的index是否已存在于数组中（即该项是否已被选中），根据其选中状态切换样式
+                    selected_type.find(item => item == index) == undefined
+                      ? select_on
+                      : !select_on
+                }"
+                @click="option_swtich(index)"
+                v-for="(i, index) in chestdata[0].items"
+                :key="i.name"
+              >
+                <i class="options_icon"></i>
+                <div class="options_info">
+                  <span class="options_name">{{ i.name }}</span>
+                  <span class="options_count">1/{{ i.count }}</span>
+                  <!-- 通过设置进度条的宽度百分比来展现该点位的进度情况 -->
+                  <div class="progress">
+                    <div class="progress_finish"></div>
+                  </div>
+                </div>
+              </li>
+            </div>
+          </div>
+          <div class="methodselect">
+            <div class="selector_list">
+              <li
+                class="selector_list_option"
+                :class="{
+                  on:
+                    //检测当前option的id是否已存在于数组中（即该项是否已被选中），根据其选中状态切换样式
+                    selected_type.find(item => item == i.id) == undefined
+                      ? select_on
+                      : !select_on
+                }"
+                @click="option_swtich(i.id)"
+                v-for="i in chestdata[1].items"
+                :key="i.name"
+              >
+                <i class="options_icon"></i>
+                <div class="options_info">
+                  <span class="options_name">{{ i.name }}</span>
+                  <span class="options_count">1/{{ i.count }}</span>
+                  <!-- 通过设置进度条的宽度百分比来展现该点位的进度情况 -->
+                  <div class="progress">
+                    <div class="progress_finish"></div>
+                  </div>
+                </div>
+              </li>
+            </div>
+          </div>
+        </a-carousel>
+      </div>
+    </div>
   </div>
 </template>
 
@@ -65,14 +102,19 @@ export default {
   name: "chestselect",
   data() {
     return {
+      btn_index: 0,
+      isoff: false,
+      switch_btn_class: "switch_btn_normal",
+      selected_span: true,
       select_on: false,
       option_type: [],
       chest_type: [],
       selected_type: [],
-      selected_area: 0
+      selected_area: 0,
+      animate_state: true,
     };
   },
-  props: ["btnindex", "chesttype"],
+  props: ["chestdata","itemtypedata"],
   methods: {
     //将选择项的索引存入数组，以实现样式切换和点位渲染
     option_swtich(index) {
@@ -85,121 +127,42 @@ export default {
         this.selected_type.splice(cancel_typeindex, 1);
       }
     },
-    //向父组件传递动画的完成状态，避免在动画过程中操作切换按钮导致轮播失效
-    beforechange(){
-      this.$emit('changestate',false)
+    //按钮样式切换
+    swtich_class(check, btn_index) {
+      if (check == false && this.animate_state == true) {
+        this.selected_span = !this.selected_span;
+        if (
+          this.switch_btn_class == "switch_btn_normal" ||
+          this.switch_btn_class == "switch_btn_off"
+        ) {
+          this.switch_btn_class = "switch_btn_on";
+          this.btn_index = btn_index;
+        } else {
+          this.switch_btn_class = "switch_btn_off";
+          this.btn_index = btn_index;
+        }
+      }
     },
-    afterchange(){
-      this.$emit('changestate',true)
+    //记录动画的完成状态，避免在动画过程中操作切换按钮导致轮播失效
+    beforechange() {
+      this.animate_state = false;
+    },
+    afterchange() {
+      this.animate_state = true;
+    },
+    //折叠面板
+    panel_fold() {
+      this.isoff = !this.isoff;
     }
   },
   watch: {
     //宝箱选择界面的切换
-    btnindex: function(val) {
+    btn_index: function(val) {
       this.$refs.varousel.goTo(val);
     }
   }
 };
 </script>
 <style lang="scss" scoped>
-.chestselect {
-  width: 418px;
-  height: 110px;
-  margin: 5px auto;
-  .methodselect {
-    padding-right: 5px;
-  }
-  .typeselect,
-  .methodselect {
-    position: relative;
-    width: 100%;
-    height: 120px;
-    overflow: hidden scroll;
-    .selector_list {
-      display: flex;
-      flex-wrap: wrap;
-      justify-content: space-between;
-    }
-    .selector_list_option {
-      position: relative;
-      width: 190px;
-      height: 50px;
-      background: url(../../assets/Content_img/item_normal.png) no-repeat;
-      background-size: 100% 100%;
-      margin-bottom: 10px;
-      cursor: pointer;
-    }
-    .options_icon {
-      display: block;
-      position: absolute;
-      background: url(../../assets/Content_img/Content_img/icon1.png) no-repeat;
-      width: 35px;
-      height: 35px;
-      background-size: 100% 100%;
-      top: 7px;
-      left: 3.4px;
-    }
-    .options_info {
-      width: 100px;
-      height: 96%;
-      margin: 2px 0 0 38px;
-      display: flex;
-      flex-direction: column;
-      justify-content: flex-start;
-      transform: scale(0.85);
-      span {
-        display: block;
-      }
-      .options_name {
-        height: 22px;
-        line-height: 22px;
-        font-size: 18px;
-        color: #8d807d;
-      }
-      .options_count {
-        height: 16px;
-        font-size: 13px;
-        line-height: 16px;
-        color: #817472;
-      }
-      .progress {
-        width: 100%;
-        height: 3px;
-        margin-top: 2px;
-        background: #817472;
-        border-radius: 2px;
-      }
-      .progress_finish {
-        width: 40%;
-        height: 3px;
-        background: #00f5ff;
-        border-radius: 2px;
-      }
-    }
-    .selector_list_option.on {
-      background: url(../../assets/Content_img/item_selected.png) no-repeat;
-      .options_name,
-      .options_count {
-        color: #fffade;
-      }
-    }
-  }
-  .typeselect::-webkit-scrollbar {
-    width: 8px;
-    background: none;
-    border-radius: 4px;
-  }
-  .methodselect::-webkit-scrollbar {
-    width: 8px;
-    background: #f0e9e2;
-    border-radius: 4px;
-  }
-  .typeselect::-webkit-scrollbar-thumb,
-  .methodselect::-webkit-scrollbar-thumb {
-    width: 8px;
-    height: 10px;
-    background: #685e5c;
-    border-radius: 4px;
-  }
-}
+@import "../../assets/style/picker_chest.scss";
 </style>

@@ -1,123 +1,3 @@
-//筛选器样式
-@font-face {
-    font-family: font;
-    src: url(../assets/hywh_thin2.ttf);
-}
-.picker
-{
-    position: fixed;
-    z-index: 9999;
-    right:5px;
-    top: 5px;
-    width: 480px;
-    height: 870px;
-    max-height: 1044px;
-    background: url(../assets/Content_img/Content_img/bac.png) no-repeat;
-    background-size: 100% 100%;
-    user-select: none;
-    overflow: hidden scroll;
-}
-//高分辨率
-@media screen and (min-width:3000px){
-    .picker {
-        zoom: 2;
-    }
-}
-@media screen and (min-width:2049px) and (max-width:2900px){
-    .picker {
-        zoom: 1.1;
-    }
-}
-//中形屏幕
-@media screen and (min-width:1440px) and (max-width:1768px) {
-    .picker {
-        zoom: 0.8;
-    }
-}
-//小型屏幕
-@media screen and (min-width:1280px) and (max-width:1439px) {
-    .picker {
-        zoom: 0.6;
-    }
-}
-.picker::-webkit-scrollbar
-{
-    background:none;
-}
-.picker_header_bg{
-    position: absolute;
-    z-index: 1;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 251px;
-    background:url(../assets/Content_img/Content_img/bac.png) no-repeat;
-    background-position: 0px 0px;
-}
-.picker_header
-{
-    position: relative;
-    z-index: 2;
-    display: flex;
-    justify-content: space-between;
-    width: 100%;
-    height: 13%;
-    .avatar{
-        position: relative;
-        width:104px;
-        height:80px;
-        background: url(../assets/Content_img/Content_img/avatar_bg.png) no-repeat;
-        background-size: 100% 100%;
-        margin: 30px 0 0 30px;
-        .avatar_img
-        {
-            position: absolute;
-            width: 66px;
-            height: 66px;
-            top: 6%;
-            left: 18%;
-        }
-    }
-    .info_part{
-        width: 62%;
-        height: 30%;
-        margin: 30px 20px 0 0;
-        .user_link{
-            display: block;
-            color: #D7D2B8;
-            font-size: 22px;
-            text-decoration: none;
-        }
-        .info_part-links
-        {
-            display: flex;
-            margin-top: 20px;
-            a{
-                display: flex;
-                font-size: 18px;
-                color: #D7D2B8;
-                text-decoration: none;
-                margin-right: 30px;
-            }
-            @mixin icon {
-                display: block;
-                width: 24px;
-                height: 24px;
-                margin-right: 5px;
-            }
-            .icon1{
-                @include icon;
-                background: url(../assets/Content_img/Content_img/icon_cloud.png) no-repeat;
-                background-size: 100% 100%;
-            }
-            .icon2{
-                @include icon();
-                background: url(../assets/Content_img/Content_img/icon_fankui.png) no-repeat;
-                background-size: 100% 100%;
-            }
-        }
-    }
-}
 .picker_area1
 {
     position: relative;
@@ -161,7 +41,7 @@
                 display: block;
                 width: 34px;
                 height: 34px;
-                background:url(../assets/Content_img/Content_img/Treasure_icon.png) no-repeat;
+                background:url(../../assets/Content_img/Content_img/Treasure_icon.png) no-repeat;
                 background-size: 100% 100%;
             }
             span
@@ -182,7 +62,7 @@
             position: relative;
             width: 180px;
             height: 30px;
-            background:url(../assets/Content_img/Content_img/bac_switch.png) no-repeat;
+            background:url(../../assets/Content_img/Content_img/bac_switch.png) no-repeat;
             background-size: 100% 100%;
             margin-left: 80px;
             span{
@@ -193,7 +73,6 @@
                 font-size: 16px;
                 color: #817472;
                 cursor: pointer;
-                margin-left: 5px;
             }
         }
         @mixin switchbtn {
@@ -202,7 +81,7 @@
             left: 2px;
             width: 90px;
             height: 26px;
-            background:url(../assets/Content_img/Content_img/bac_switch_btn.png) no-repeat;
+            background:url(../../assets/Content_img/Content_img/bac_switch_btn.png) no-repeat;
             background-size: 100% 100%;
         }
         @keyframes switchright{
@@ -244,12 +123,12 @@
             width: 18px;
             height: 12px;
             margin-left: 20px;
-            background: url(..//assets/Content_img/Content_img/treasure_fold.png) no-repeat;
+            background: url(../../assets/Content_img/Content_img/treasure_fold.png) no-repeat;
             background-size: 100% 100%;
         }
         .fold_btn.off
         {
-            background: url(..//assets/Content_img/Content_img/treasure_unfold.png) no-repeat;
+            background: url(../../assets/Content_img/Content_img/treasure_unfold.png) no-repeat;
             background-size: 100% 100%;
         }
     }
@@ -282,6 +161,7 @@
         box-shadow: 0px 0px 8px 0px rgba(96, 81, 48, 0.15);
         border: 1px solid #D0C8C4;
         border-radius: 5px;
+        overflow: hidden;
         animation: panel_fold 0.5s forwards;
     }
     .picker_area1_main.off{
@@ -301,36 +181,103 @@
         border-radius: 4px;
     }
 }
-.picker_area2
-{
+.typeselect,
+.methodselect {
     position: relative;
-    width: 448px;
-    height: 470px;
-    margin: 28px auto 0;
-    .picker_area2_cover{
-        position: absolute;
-        top: 0;
-        left: 3%;
-        width: 94%;
-        height: 20px;
-        background: #9F9089;
-        border-radius: 5px;
+    width: 100%;
+    height: 120px;
+    overflow: hidden scroll;
+    margin: 10px auto 0;
+    .selector_list {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
     }
-    .picker_area2_containor
-    {
-        z-index: 10;
-        position: relative;
-        width: 100%;
-        height: 100%;
-        padding-bottom: 10px;
-        margin: 5px 0 0 7px;
-        background:#F0E9E2;
-        border-radius: 5px;
+    .selector_list_option {
+    position: relative;
+    width: 190px;
+    height: 50px;
+    background: url(../../assets/Content_img/item_normal.png) no-repeat;
+    background-size: 100% 100%;
+    margin-bottom: 10px;
+    cursor: pointer;
     }
-    .item-selector-options
-    {
-        display: flex;
-        width: 400px;
-        margin: 20px auto;
+    .options_icon {
+    display: block;
+    position: absolute;
+    background: url(../../assets/Content_img/Content_img/icon1.png) no-repeat;
+    width: 35px;
+    height: 35px;
+    background-size: 100% 100%;
+    top: 7px;
+    left: 3.4px;
+    }
+    .options_info {
+    width: 140px;
+    height: 96%;
+    margin: 2px 0 0 38px;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    transform: scale(0.85);
+    span {
+        display: block;
+    }
+    .options_name {
+        height: 22px;
+        line-height: 22px;
+        font-size: 18px;
+        color: #8d807d;
+    }
+    .options_count {
+        height: 16px;
+        font-size: 13px;
+        line-height: 16px;
+        color: #817472;
+    }
+    .progress {
+        width: 100px;
+        height: 3px;
+        margin-top: 2px;
+        background: #817472;
+        border-radius: 2px;
+    }
+    .progress_finish {
+        width: 40%;
+        height: 3px;
+        background: #00f5ff;
+        border-radius: 2px;
+    }
+    }
+    .selector_list_option.on {
+    background: url(../../assets/Content_img/item_selected.png) no-repeat;
+    .options_name,
+    .options_count {
+        color: #fffade;
+    }
     }
 }
+.typeselect::-webkit-scrollbar {
+    width: 8px;
+    background: none;
+    border-radius: 4px;
+}
+.methodselect::-webkit-scrollbar {
+    width: 8px;
+    background: #f0e9e2;
+    border-radius: 4px;
+}
+.typeselect::-webkit-scrollbar-thumb,
+.methodselect::-webkit-scrollbar-thumb {
+    width: 8px;
+    height: 10px;
+    background: #685e5c;
+    border-radius: 4px;
+}
+.methodselect
+{
+    width: 99% !important;
+    height: 110px;
+    padding-right: 5px;
+}
+  

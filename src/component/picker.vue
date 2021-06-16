@@ -1,5 +1,12 @@
 <template>
-  <div class="picker">
+  <div class="picker" :class="{ off: picker_state }">
+    <!-- 开关 -->
+    <a
+      href="javascript:;"
+      class="switch_btn"
+      @click="picker_switch"
+      :class="{ off: picker_state }"
+    ></a>
     <!-- 头部区域 -->
     <div class="picker_header">
       <div class="avatar">
@@ -23,56 +30,9 @@
       </div>
     </div>
     <!-- 宝箱筛选区域 -->
-    <div class="picker_area1">
-      <div style="width: 100%; height: 1px"></div>
-      <div class="picker_area1_cover"></div>
-      <div class="picker_area1_containor">
-        <div class="picker_area1_header">
-          <h3>
-            <i class="picker_area1_header_icon"></i>
-            <span>宝箱筛选</span>
-          </h3>
-          <div class="switch_btn">
-            <div :class="switch_btn_class"></div>
-            <span
-              :class="{ selected_span: selected_span }"
-              @click="swtich_class(selected_span, 0)"
-              >宝箱种类</span
-            >
-            <span
-              :class="{ selected_span: !selected_span }"
-              @click="swtich_class(!selected_span, 1)"
-              >获取方式</span
-            >
-          </div>
-          <a
-            href="javascript:;"
-            class="fold_btn"
-            @click="panel_fold"
-            :class="{ off: isoff }"
-          ></a>
-        </div>
-        <div class="picker_area1_main" :class="{ off: !isoff }">
-          <chestselect
-            v-show="!isoff"
-            :btnindex="btn_index"
-            :chesttype="chest_type"
-            @changestate="changestate"
-          ></chestselect>
-        </div>
-      </div>
-    </div>
-    <!-- 地图要素筛选 -->
-    <!-- <div class="picker_area2">
-        <div style="width: 100%; height: 1px"></div>
-        <div class="picker_area2_cover"></div>
-        <div class="picker_area2_containor">
-            <div style="width: 100%; height: 1px"></div>
-            <div class="item-selector-options">
-            </div>
-            <regionselect></regionselect>
-        </div>
-      </div> -->
+    <chestselect :chestdata="chestdata" ></chestselect>
+    <!-- 物品筛选区域 -->
+    <regionselect :itemtypedata="itemtypedata"></regionselect>
   </div>
 </template>
 
@@ -87,14 +47,25 @@ export default {
   name: "picker",
   data() {
     return {
-      show: true,
-      switch_btn_class: "switch_btn_normal",
-      selected_span: true,
-      isoff: false,
-      btn_index: 0,
-      chest_type: "",
-      animate_state: true,
-      option_type: ""
+      chestdata: [
+        {
+          icon: "",
+          items: [],
+          name: ""
+        },
+        {
+          icon: "",
+          items: [],
+          name: ""
+        }
+      ],
+      itemtypedata: {
+        icon: "",
+        items: [],
+        name: ""
+      },
+      btn_switch: "",
+      picker_state: false
     };
   },
   components: {
@@ -102,42 +73,35 @@ export default {
     regionselect
   },
   methods: {
-    //按钮样式切换
-    swtich_class(check, btn_index) {
-      if (check == false && this.animate_state==true) {
-        this.selected_span = !this.selected_span;
-        if (
-          this.switch_btn_class == "switch_btn_normal" ||
-          this.switch_btn_class == "switch_btn_off"
-        ) {
-          this.switch_btn_class = "switch_btn_on";
-          this.btn_index = btn_index;
-        } else {
-          this.switch_btn_class = "switch_btn_off";
-          this.btn_index = btn_index;
-        }
-      }
-    },
-    //折叠面板
-    panel_fold() {
-      this.isoff = !this.isoff;
-    },
-		//监听轮播的动画状态，避免在动画过程中操作切换按钮导致轮播失效
-    changestate(val) {
-      this.animate_state = val;
+    //筛选器折叠
+    picker_switch() {
+      this.picker_state = !this.picker_state;
     }
   },
   mounted() {
     let that = this;
     //查询点位类型信息
     options_type_select().then(function(res) {
-      that.option_type = res.data.data;
-      that.chest_type = res.data.data[0].types[7].items;
+      //记录宝箱数据
+      that.chestdata = [
+        {
+          icon: res.data.data[0].types[7].icon,
+          items: res.data.data[0].types[7].items,
+          name: res.data.data[0].types[7].name
+        },
+        {
+          icon: res.data.data[0].types[8].icon,
+          items: res.data.data[0].types[8].items,
+          name: res.data.data[0].types[8].name
+        }
+      ];
+      //记录收集物数据
+      that.itemtypedata = res.data.data[0].types.slice(0,7);
     });
   }
 };
 </script>
 
 <style lang="scss" scoped>
-@import "../assets/picker.scss";
+@import "../assets/style/picker.scss";
 </style>
