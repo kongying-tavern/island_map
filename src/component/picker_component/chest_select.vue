@@ -12,8 +12,7 @@
           <div :class="switch_btn_class"></div>
           <span
             :class="{ selected_span: selected_span }"
-            @click="swtich_class(selected_span, 0)"
-            style="margin-left:3px"
+            @click="swtich_class(selected_span, 0)"  
             >宝箱种类</span
           >
           <span

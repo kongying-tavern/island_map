@@ -21,7 +21,7 @@
         <div class="picker_area2_main">
           
         </div>
-      </div>
+      </div>  
     </div>
   </div>
 </template>
