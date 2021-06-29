@@ -41,22 +41,7 @@
     user-select: none;
     overflow: hidden scroll;
     animation: picker_on 0.5s forwards;
-    .switch_btn{
-        display: block;
-        position: fixed;
-        width: 100px;
-        height: 100px;
-        top: 20px;
-        right: 485px;
-        background: url(../assets/Content_img/paimon_on.png) no-repeat;
-        cursor: pointer;
-        animation: switch_btn_on 0.5s forwards;
-    }
-    .switch_btn.off
-    {
-        background: url(../assets/Content_img/paimon_off.png) no-repeat;
-        animation: switch_btn_off 0.5s forwards;
-    }
+
     .picker_header
     {
         position: relative;
@@ -153,26 +138,94 @@
     }
     
 }
-@keyframes switch_btn_on {
-    from{
-        right: 10px;
-    }
-    to{
-        right: 485px;
-    }
+// @keyframes switch_btn_on {
+//     from{
+//         right: 10px;
+//     }
+//     to{
+//         right: 485px;
+//     }
     
-}
-@keyframes switch_btn_off {
-    from{
-        right: 485px;
-    }
-    to{
-        right: 10px;
-    }
+// }
+// @keyframes switch_btn_off {
+//     from{
+//         right: 485px;
+//     }
+//     to{
+//         right: 10px;
+//     }
     
-}
+// }
 .picker::-webkit-scrollbar
 {
     background:none;
 }
-
+.sidebar{
+    position: fixed;
+    width: 100px;
+    height: 822px;
+    top: 20px;
+    right: 485px;
+    .switch_btn{
+        display: block;
+        position: absolute;
+        width: 100px;
+        height: 100px;
+        top: 0px;
+        right: 0px;
+        background: url(../assets/Content_img/paimon_on.png) no-repeat;
+        cursor: pointer;
+    }
+    .switch_btn.off
+    {
+        background: url(../assets/Content_img/paimon_off.png) no-repeat;
+    }
+    .region_picker
+    {
+        position: absolute;
+        top: 120px;
+        right: 15px;
+    }
+    .region_options
+    {
+        list-style-type: none;
+        width: 78px;
+        height: 78px;
+        margin-bottom: 10px;
+        a{
+            display: block;
+            width: 100%;
+            height: 100%;
+        }
+        .options1{
+            background: url(../assets/Content_img/Content_img/region1.png);
+        }
+        .options2{
+            background: url(../assets/Content_img/Content_img/region2.png);
+        }
+        .options3{
+            background: url(../assets/Content_img/Content_img/region3.png);
+            cursor: not-allowed;
+        }
+        .options4{
+            background: url(../assets/Content_img/Content_img/region4.png);
+            cursor: not-allowed;
+        }
+        .options5{
+            background: url(../assets/Content_img/Content_img/region5.png);
+            cursor: not-allowed;
+        }
+        .options6{
+            background: url(../assets/Content_img/Content_img/region6.png);
+            cursor: not-allowed;
+        }
+        .options7{
+            background: url(../assets/Content_img/Content_img/region7.png);
+            cursor: not-allowed;
+        }
+    }
+    .region_options.off
+    {
+        opacity: 0.4;
+    }
+}

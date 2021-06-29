@@ -28,7 +28,7 @@
 
 <script>
 export default {
-  name: "regionselect",
+  name: "itemselect",
   data() {
     return {
       option_type: "",

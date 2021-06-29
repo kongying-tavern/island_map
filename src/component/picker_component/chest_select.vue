@@ -131,7 +131,7 @@ export default {
       if (check == false && this.animate_state == true) {
         this.selected_span = !this.selected_span;
         if (
-          this.switch_btn_class == "switch_btn_normal" ||
+          this.switch_btn_class == "switch_btn_normal" || 
           this.switch_btn_class == "switch_btn_off"
         ) {
           this.switch_btn_class = "switch_btn_on";

@@ -6,7 +6,8 @@ Vue.use(Vuex)
 export default new Vuex.Store({
   state: {
     //点位类型
-    options_type:''
+    options_type:'',
+    selected_options:[]
   },
   mutations: {
     update_type(state,type)
